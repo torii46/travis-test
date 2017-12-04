@@ -12,7 +12,7 @@ class MainTest(unittest.TestCase):
         print('test_first')
 
     def test_main(self):
-        fuga = Main()
+        main = Main()
         self.assertTrue(main.index())
 
 
