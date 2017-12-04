@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - 3.3
+  - 3.4
+
+install:
+  - pip install codecov
+
+script:
+  - coverage run --source=main_test setup.py test
+
+after_success:
+  - codecov
+
+notifications:
+  slack:
+    secure: VnjPVMnvC/bdHXfB8eg7RFa5jJAFUfgtTal40/gWDqIjuDXVEJz4ZoIKZuRzi/XVTT4wZR4pkVDpUr9NEKKCwvl4ewnHlvVgLKYLrbJlF8HjHHfrHnBufmaTVkBoxzriz4bxCMbkAB2vsAsB2nVGS7XAy60qoI23kh2rZ3QctgsbVVpgb0WbS/vo+FZCiDFTSxIEwHg9uzJRLwItNMzQz2HWm+X60sUhW86qPs5zpX3DI0rpiNKwwJ18TdiI878FKlF8hRjT5eP5LmnQUK12rGpThFcw6+3r7qbDqIMmDmmPeSIGavVy1YnUxUTnxZFWN2rRqUAf94rY8zRsBv+3v461F2+mDYtwQEoa0te3bbrs8w4apbXY0HC/VPBxNBxNA7kXl6gL9tlLtj7SyCAbm7//soRuDUmYZQYZaTDaLpq4iqUUiWqBaqXu9o+YfKxJQlBbJoMkASAeCYiJ4EVQyF0IrqurjUoeMCSjpDm3YAykqAM03XkHQgDqmy/KwGymeLzv9anVKA6DqP2xPs7iZzGuUVOI8OmfSFkpPBJ/l8r6pRgSnGBeizPvu407Jpfq6WAbRGNK/wRTeKZYDrRgwgsIJ4sO25k66B1Dtmff84Cl8kd4VeQ5CqP0hDT5LJsojZgXDT4Us7F9gjrlR0MzR6YSuGihBoUAnOqlF/1uYHc=
